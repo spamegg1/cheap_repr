@@ -17,3 +17,4 @@ jobs:
         pip install coveralls .[tests]
         coverage run --source cheap_repr -m pytest
         coverage report -m
+        coveralls
