@@ -3,7 +3,6 @@ import re
 import unittest
 from array import array
 from collections import defaultdict, deque
-from collections.abc import Set
 from sys import version_info, version
 from unittest import skipIf
 
@@ -18,6 +17,11 @@ try:
     from collections import ChainMap
 except ImportError:
     from chainmap import ChainMap
+
+try:
+    from collections import Set
+except ImportError:
+    from collections.abc import Set
 
 from cheap_repr import basic_repr, register_repr, cheap_repr, PY2, PY3, ReprSuppressedWarning, find_repr_function, \
     raise_exceptions_from_default_repr, repr_registry
