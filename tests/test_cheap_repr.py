@@ -2,7 +2,8 @@ import os
 import re
 import unittest
 from array import array
-from collections.abc import defaultdict, deque, Set
+from collections import defaultdict, deque
+from collections.abc import Set
 from sys import version_info, version
 from unittest import skipIf
 
