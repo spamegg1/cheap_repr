@@ -18,9 +18,9 @@ try:
 except ImportError:
     from chainmap import ChainMap
 
-try:
+if sys.version_info.major == 2:
     from collections import Set
-except ImportError:
+else:
     from collections.abc import Set
 
 from cheap_repr import basic_repr, register_repr, cheap_repr, PY2, PY3, ReprSuppressedWarning, find_repr_function, \
