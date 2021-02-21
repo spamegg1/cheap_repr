@@ -13,6 +13,8 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - name: run tests
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         pip install coveralls .[tests]
         coverage run --source cheap_repr -m pytest
