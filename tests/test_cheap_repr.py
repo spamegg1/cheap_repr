@@ -305,9 +305,9 @@ array([[[[   0, ...,    9],
             self.assert_cheap_repr(numpy.ma.array([1, 2, 3], mask=[0, 1, 0]),
                                    "MaskedArray(dtype('int64'), shape=(3,))")
 
-            self.assert_cheap_repr(numpy.matrix([[1, 2], [3, 4]]),
+            self.assert_cheap_repr(numpy.ndarray([[1, 2], [3, 4]]),
                                    """\
-matrix([[1, 2],
+ndarray([[1, 2],
         [3, 4]])""")
 
         def test_pandas(self):
