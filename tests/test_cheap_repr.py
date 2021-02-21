@@ -18,7 +18,7 @@ try:
 except ImportError:
     from chainmap import ChainMap
 
-if sys.version_info.major == 2:
+if version_info.major == 2:
     from collections import Set
 else:
     from collections.abc import Set
